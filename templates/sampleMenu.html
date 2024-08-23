@@ -1,0 +1,55 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+{% load static%}
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/98e9a138af.js"></script>
+    <title>Menu</title>
+</head>
+<header>
+    <div>
+    <nav id="nav">
+        <ul>
+            <li><a href="{% url "home"%}">Home</a></li>
+            <li><a href="{% url "about"%}">About</a></li>
+            <li><a href="{% url "SampleMenu"%}">Menu</a></li>
+            <li><a href="{% url "cart"%}">View Cart</a></li>
+            <li><a href="{% url "logout"%}">Log Out</a></li>
+        </ul>
+    </nav>
+    </div>
+</header>
+<body>
+    <div class="menu-card">
+        {% for item in menu %}
+        <div class="menu-card-single">
+            <img src="/static/{{item.imgurl}}" alt="" class="menu-img">
+            <div class="menu-content">
+                <div class="menu-header">
+                    <div class="vegORnonveg"><img src="/static/{{item.vegORnonvegurl}}" alt="" class="veg-img"></div>
+                    <div class="menu-name">{{item.name}}</div>
+                </div><br>
+                <div class="menu-description"></div><br>
+                <div class="menu-price">--₹{{item.price}}--</div>
+                <div class="cart-button-div-out">
+                    <form action="{% url 'add_to_cart' item.id %}" method="post">
+                        {% csrf_token %}
+                    <button class="cart-button">
+                        <div class="cart-button-div-in">
+                            <div class="cart-img-div"><img src="{% static 'images/cart_icon.png' %}" alt="" class="cart-img"></div>
+                            <div class="add-to-cart">Add to Cart</div>
+                        </div>
+                    </button>  
+                    </form>  
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>
+{% endblock content %}

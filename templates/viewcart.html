@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static%}
+
+{% if cart_items %}
+    {% for item in cart_items %}
+        <div>
+            {% if item.quantity > 0 %}
+            <img src="/static/{{item.menu_item.imgurl}}" alt="{{ item.name }}">
+            <p>{{ item.menu_item.name }}</p>
+            <p>Quantity: {{ item.quantity }}</p>
+            <a style="font-size:80" href="{% url "increment_quantity" item.id %}">+</a>
+            <a href="{% url "decrement_quantity" item.id %}">-</a>
+            <hr>
+            {% endif %}
+        </div>
+        <a href="{% url "SampleMenu"%}">Add more</a>
+    {% endfor %}
+{% else %}
+    <h1>Nothing in the cart</h1>
+    <a href="{% url "SampleMenu"%}">Add Now</a>
+{% endif %}

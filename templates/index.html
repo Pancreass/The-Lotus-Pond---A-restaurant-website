@@ -1,0 +1,57 @@
+ <!DOCTYPE html>
+<html>
+{% load static%}
+<head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #nav ul{
+      display: flex;
+      justify-content:space-evenly;
+      background-color: black;
+      height: 40px;  
+      margin: 0;
+      padding-top: 20px;
+    }
+
+    a {
+
+      list-style-type: none;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: white;
+      text-decoration: none;
+      
+    }
+
+
+  </style>
+  <title>HOME</title>
+  <header>
+    <div>
+    <nav id="nav">
+      <ul>
+        <li><a href="{% url "home"%}">Home</a></li>
+        <li><a href="{% url "about"%}">About</a></li>
+        <li><a href="{% url "SampleMenu"%}">Menu</a></li>
+        <li><a href="{% url "cart"%}">View Cart</a></li>
+        <li><a href="{% url "logout"%}">Log Out</a></li>
+      </ul>
+    </nav>
+    </div>
+</head>
+
+<body style="background: url(/static/images/chinese.jpg);background-size: cover;background-position:center ; width: 100vw;
+height: 100vh;">
+  <div
+    style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color: white;position:absolute;top: 250px;left: 400px;">
+    <h style="font-size: 100px;">The Lotus Pond</h>
+    <i>
+      <h2>chinese restaurant</h2>
+    </i>
+  </div>
+</body>
+
+</html>

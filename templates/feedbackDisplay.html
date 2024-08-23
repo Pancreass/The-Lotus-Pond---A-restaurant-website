@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Thank You!</title>
+</head>
+
+<body>
+    <h1>Thank you for your feedback!</h1>
+    
+    <h2>Submitted Feedbacks:</h2>
+    {% for feedback_item in feedback_data %}
+    <div>
+        <p style="font-size:20px"><u>Name</u>: {{ feedback_item.name }}</p>
+        <p style="font-size:20px"><u>Feedback</u>: {{ feedback_item.feedback }}</p>
+        <br>
+        <hr>
+    </div>
+    {% endfor %}
+    <a style="list-style-type: none; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: black; cursor: pointer; font-size:25px;" href="{% url "about" %}">Go Back</a>
+</body>
+
+</html>

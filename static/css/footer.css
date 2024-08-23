@@ -1,0 +1,156 @@
+* {
+    margin: :0;
+    padding: 0:;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+
+body{
+    background: #eef8ff;
+}
+
+footer{
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    color: #fff;
+    padding: 100px 0 30px;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact{
+    font-size: 15px;
+    flex-basis: 25%;
+    padding: 10px;
+    text-align: center;
+    margin-top: -30px;
+}
+
+.email{
+    color: rgb(216, 208, 161);
+    font-size: 15px;
+}
+
+.email:hover{
+    color: purple;
+    background-color: transparent;
+}
+
+h2{
+    font-size: 20px;
+}
+
+.logo{
+    width: 450px;
+    margin-top: -70px;
+    margin-bottom: 30px;
+}
+
+.icons .fa-brands{
+    width: 112px;
+    height: 40px;
+    font-size: 35px;
+    text-align: center;
+    color: white;
+    margin-bottom: 150px;
+}
+
+.icons .fa-instagram:hover{
+    color: darkmagenta;
+}
+
+.icons .fa-facebook-f:hover{
+    color: darkblue;
+}
+
+.icons .fa-x-twitter:hover{
+    color: black;
+}
+
+.icons .fa-pinterest-p:hover{
+    color: red;
+}
+
+form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+    margin-top: 80px;
+}
+
+form .fa-regular{
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+form input{
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+
+}
+
+form button{
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+form button .fa-solid{
+    font-size: 16px;
+    color: #ccc;
+}
+
+.email-id{
+    font-size: 25px;
+    flex-basis: 25%;
+    padding: 10px;
+    text-align: center;
+    margin-top: -45px;
+}
+
+.established{
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: -21px;
+}
+
+.membership{
+    color: white;
+    border: 1px solid #fff;
+    display: inline-block;
+    padding: 8px 48px;
+    background: transparent;
+    text-align: center;
+    font-family: halyard-text, sans-serif;
+    font-weight: 400;
+    line-height: 20px;
+    white-space: nowrap;
+    border-radius: 0px;
+    letter-spacing: 1.2px;
+}
+
+span{
+
+}
+
+@media (max-width:700px){
+    footer{
+        bottom: unset;
+    }
+}
